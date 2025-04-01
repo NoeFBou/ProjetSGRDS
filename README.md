@@ -82,7 +82,6 @@ L’application SGRDS propose les fonctionnalités suivantes :
 
 - **Architecture MVC :**
   - Séparation claire entre la logique de traitement (contrôleurs), la gestion des données (modèles) et l’affichage (vues)
-  - Base commune pour les contrôleurs assurée par `BaseController.php`
 
 - **Sécurité :**
   - Mise en œuvre de mécanismes de protection des routes sensibles via un AuthGuard
