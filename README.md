@@ -1,54 +1,114 @@
-# CodeIgniter 4 Framework
+Projet SGRDS
+==================
+Ce projet a été réalisé dans le cadre de la troisième année de mon BUT Informatique. Réalisé en groupe, l’objectif était de développer une application web permettant à l’administration de l’IUT de suivre les retards des élèves et d’organiser des séances de rattrapage en cas de besoin. Le projet s’appuie sur le framework codelnighter et adopte une architecture MVC. Nous avons également reçu un cahier des charges à respecter.
 
-## What is CodeIgniter?
+---
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Présentation
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Le but de l’application est de :
+- **Gérer les retards** : Enregistrer et suivre les retards des élèves.
+- **Organiser les rattrapages** : Planifier des séances de rattrapage pour compenser les retards ou absences.
+- **Gérer les utilisateurs** : Offrir une interface d’authentification sécurisée, incluant la gestion des mots de passe (connexion, réinitialisation, oubli du mot de passe).
+- **Administrer les enseignants et étudiants** : Permettre l’ajout, la modification ou la suppression des enseignants et des étudiants.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+L’application utilise Tailwind CSS pour l'interface.
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+---
 
-## Important Change with index.php
+## Installation et Prérequis
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Pour installer et exécuter l’application SGRDS, suivez les étapes ci-dessous :
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+### Prérequis
+- **Environnement PHP** : PHP 7.x ou supérieur est recommandé.
+- **Serveur Web** : Un serveur tel qu’Apache ou Nginx (vous pouvez également utiliser le serveur intégré de PHP) ou encore le serveur php de Webstorm.
+- **Base de données** : MySQL ou autre SGBD compatible (Nous avons utilisé Postgre SQL pour notre part).
 
-**Please** read the user guide for a better explanation of how CI4 works!
+### Installation
 
-## Repository Management
+1. **Cloner le dépôt Git :**
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+   ```bash
+   git clone https://github.com/votre-utilisateur/SGRDS.git
+   ```
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+2. **Installer les dépendances :**
 
-## Contributing
+   ```bash
+   composer install
+   ```
 
-We welcome contributions from the community.
+3. **Configurer la base de données :**
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+   - Créez une base de données.
+   - Importez le fichier SQL pour créer les tables nécessaires.
 
-## Server Requirements
+4. **Configurer les fichiers de connexion :**
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+   Modifiez le fichier de configuration ( `config.php`) pour y indiquer vos identifiants de connexion à la base de données.
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+5. **Démarrer le serveur local :**
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+   Utilisez Apache, Nginx ou le serveur intégré de PHP :
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+   ```bash
+   php -S localhost:8000
+   ```
+
+6. **Accéder à l’application :**
+
+   Ouvrez votre navigateur et rendez-vous sur [http://localhost:8000](http://localhost:8000).
+
+---
+
+## Fonctionnalités Offertes
+
+L’application SGRDS propose les fonctionnalités suivantes :
+
+- **Authentification et gestion des sessions :**
+  - Connexion sécurisée
+  - Réinitialisation et oubli du mot de passe
+
+- **Gestion des retards et rattrapages :**
+  - Enregistrement des retards par les administrateurs
+  - Planification et modification des séances de rattrapage. Une fois le retard enregistré, l’application permet de planifier une séance de rattrapage.
+
+- **Gestion des enseignants et des étudiants :**
+  - L’administration peut ajouter, modifier ou supprimer les enseignants à partir de l’interface dédiée.
+
+- **Interface utilisateur moderne et interactive :**
+  - Utilisation de Tailwind CSS et tw elements pour une interface réactive
+
+- **Architecture MVC :**
+  - Séparation claire entre la logique de traitement (contrôleurs), la gestion des données (modèles) et l’affichage (vues)
+  - Base commune pour les contrôleurs assurée par `BaseController.php`
+
+- **Sécurité :**
+  - Mise en œuvre de mécanismes de protection des routes sensibles via un AuthGuard
+
+---
+
+## Objectifs Pédagogiques
+
+Ce projet avait pour objectifs pédagogiques de :
+
+- **Appliquer le modèle MVC :**  
+  Comprendre et implémenter une architecture qui sépare la logique métier, la gestion des données et la présentation.
+
+- **Travailler en équipe :**  
+  Développer une application collaborative en respectant les normes de codage et les bonnes pratiques de gestion de projet.
+
+- **Maîtriser un framework personnalisé :**  
+  Se familiariser avec le framework codelnighter.
+
+- **Développer une interface utilisateur moderne :**  
+  Utiliser Tailwind CSS et tw elements pour créer une interface esthétique et responsive.
+
+- **Assurer la sécurité de l’application :**  
+  Mettre en place des mécanismes d’authentification et de gestion des sessions, ainsi que la protection des données sensibles.
+
+- **Gérer la persistance des données :**  
+  Apprendre à interagir avec une base de données pour stocker et récupérer les informations relatives aux retards, rattrapages, enseignants et étudiants.
+
+---
