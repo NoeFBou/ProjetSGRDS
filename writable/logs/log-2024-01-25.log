@@ -1,0 +1,9 @@
+INFO - 2024-01-25 12:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-25 12:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-25 12:38:07 --> [DEPRECATED] Creation of dynamic property App\Models\ProduitsModel::$forge is deprecated in APPPATH/Models/ProduitsModel.php on line 18.
+ 1 APPPATH/Controllers/ProduitsControleur.php(8): App\Models\ProduitsModel->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ProduitsControleur->index()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProduitsControleur))
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetSGRDS/public/index.php')

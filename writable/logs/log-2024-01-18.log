@@ -1,0 +1,118 @@
+CRITICAL - 2024-01-18 08:44:33 --> Invalid file: "signup.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/BlogSignupController.php(10): view()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\BlogSignupController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/public/index.php')
+CRITICAL - 2024-01-18 08:48:09 --> Invalid file: "blogs/inscriptionPage.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/BlogSignupController.php(10): view()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\BlogSignupController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/public/index.php')
+ERROR - 2024-01-18 09:07:50 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « users » n'existe pas
+LINE 2: FROM &quot;users&quot;
+             ^ in /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#5 /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/system/Validation/StrictRules/Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/system/Validation/Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique()
+#7 /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/system/Validation/Validation.php(195): CodeIgniter\Validation\Validation->processRules()
+#8 /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/system/Controller.php(150): CodeIgniter\Validation\Validation->run()
+#9 /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/app/Controllers/BlogSignupController.php(22): CodeIgniter\Controller->validate()
+#10 /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/system/CodeIgniter.php(919): App\Controllers\BlogSignupController->store()
+#11 /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#12 /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#14 /home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/system/Commands/Server/rewrite.php(47): require_once('...')
+#15 {main}
+CRITICAL - 2024-01-18 09:07:50 --> pg_query(): Query failed: ERREUR:  la relation « users » n'existe pas
+LINE 2: FROM &quot;users&quot;
+             ^
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Validation/StrictRules/Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/Validation/Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique()
+ 4 SYSTEMPATH/Validation/Validation.php(195): CodeIgniter\Validation\Validation->processRules()
+ 5 SYSTEMPATH/Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH/Controllers/BlogSignupController.php(22): CodeIgniter\Controller->validate()
+ 7 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\BlogSignupController->store()
+ 8 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/public/index.php')
+INFO - 2024-01-18 09:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-18 09:24:20 --> Class "App\Controllers\UserModel" not found
+in APPPATH/Controllers/BlogSigninController.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\BlogSigninController->loginAuth()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/public/index.php')
+INFO - 2024-01-18 09:24:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-18 09:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-18 09:52:58 --> Class "App\Controllers\UserModel" not found
+in APPPATH/Controllers/BlogSignupController.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\BlogSignupController->store()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/public/index.php')
+CRITICAL - 2024-01-18 09:53:50 --> Array to string conversion
+in APPPATH/Controllers/BlogSignupController.php on line 30.
+ 1 APPPATH/Controllers/BlogSignupController.php(30): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\BlogSignupController->store()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/public/index.php')
+INFO - 2024-01-18 09:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-18 09:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-18 09:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-18 13:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-18 13:29:45 --> Undefined variable $texte
+in APPPATH/Views/Blogs/forgotPassword.php on line 15.
+ 1 APPPATH/Views/Blogs/forgotPassword.php(15): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/app/Views/Blogs/forgotPassword.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ForgotPasswordController.php(10): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ForgotPasswordController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/public/index.php')
+CRITICAL - 2024-01-18 13:39:49 --> Class "App\Models\UserModel" not found
+in APPPATH/Controllers/BlogSignupController.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\BlogSignupController->store()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/public/index.php')
+INFO - 2024-01-18 13:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-18 13:46:35 --> Invalid file: "reset_password.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/ResetPasswordController.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ResetPasswordController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/ct212569/TP/s6/s6.01_developpement_avance/projetModelsTP/public/index.php')
+INFO - 2024-01-18 13:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-18 13:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-18 13:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-18 13:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
